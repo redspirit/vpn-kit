@@ -4,3 +4,8 @@ wg-easy/*
 ikev2-vpn-data/*
 !ikev2-vpn-data/.readme
 ipsec.env
+
+3x/cert/*
+3x/db/*
+!3x/cert/.readme
+!3x/db/.readme
