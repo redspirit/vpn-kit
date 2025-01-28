@@ -1,2 +1,6 @@
 wg-easy/*
 !wg-easy/.readme
+
+ikev2-vpn-data/*
+!ikev2-vpn-data/.readme
+ipsec.env

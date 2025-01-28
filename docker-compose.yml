@@ -24,3 +24,16 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
       - net.ipv4.ip_forward=1
     restart: unless-stopped
+
+  ipsec:
+    image: hwdsl2/ipsec-vpn-server
+    container_name: ipsec
+    env_file: ipsec.env
+    restart: always
+    volumes:
+      - ./ikev2-vpn-data:/etc/ipsec.d
+      - /lib/modules:/lib/modules:ro
+    ports:
+      - 500:500/udp
+      - 4500:4500/udp
+    privileged: true
