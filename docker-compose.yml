@@ -14,7 +14,11 @@ services:
       - PEERS=8 #optional
       - PEERDNS=auto #optional
       - INTERNAL_SUBNET=10.13.13.0 #optional
-      - ALLOWEDIPS=0.0.0.0/0 #optional
+      - WG_ALLOWED_IPS=0.0.0.0/0 #optional
+      - UI_TRAFFIC_STATS=true
+      - UI_ENABLE_SORT_CLIENTS=true
+      - UI_CHART_TYPE=1
+    env_file: wg.env
     volumes:
       - ./wg-easy:/etc/wireguard
     ports:

@@ -9,3 +9,5 @@ ipsec.env
 3x/db/*
 !3x/cert/.readme
 !3x/db/.readme
+
+wg.env
